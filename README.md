@@ -1,3 +1,34 @@
+# Ratify
+
+This Angular app contains an Angular library inside projects/ratify.
+
+Build library with `npm run build ratify`.
+From the folder `dist/ratify` you can either:
+- `npm link` and then `npm link ratify` on the project you want to import.
+- `npm pack` to generate a tarball to be installed.
+- `npm publish` to push your package to the npm registry.
+
+To increment a version, cd to the folder `project/ratify` and run `npm version patch|minor|major`.
+
+Use the library by importing the module to your AppModule:
+```
+import { RatifyModule } from 'ratify';
+
+@NgModule({
+    ...
+  imports: [
+    ...
+    RatifyModule
+  ],
+  ...
+})
+```
+
+And use the RatifyComponent in your HTML:
+```
+<cc-ratify></cc-ratify>
+```
+
 # CcAngularPackage
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
